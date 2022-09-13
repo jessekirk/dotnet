@@ -1,0 +1,32 @@
+{
+    "dotNetAssembly": {
+        "path": "./DotNetZip.dll",
+        "version": "1.16.0.0"
+    },
+    "dateTimeFormat": "yyyyMMddTHHmmssZ",
+    "compressionLevel": "bestcompression",
+    "productName": null,
+    "productVersion": null,
+    "iconFile": "./powershell_black.ico",
+    "defaultExtractDirectory": "c:/sie/authorized/applications/dd/",
+    "removeUnpackedFilesAfterExecute": true,
+    "quiet": true,
+    "gitlabPath": "d:/gitlab",
+    "remote": {
+        "parentPath": "//172.16.30.11/me-prod-users/share/groups/sams-c2/automation/",
+        "config": "/_cfg/*"
+    },
+    "locald": null,
+    "outputPath": null,
+    "appsWithDependencies": [
+        {
+            "name": "google chrome"
+        },
+        {
+            "name": "microsoft edge"
+        },
+        {
+            "name": "mozilla firefox"
+        }
+    ]
+}
