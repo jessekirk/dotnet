@@ -13,7 +13,12 @@ function new-dp
     (
         [parameter(Mandatory, Position = 0)]
         [ValidateScript({ Test-Path -Path $_ })]
-        [string]$path
+        [string]$path,
+
+        [parameter(Position = 1)]
+        [ValidateSet('git', 'locald')]
+        [string]$build = 'git'
+
     )
 
     <# array output beginning with[0]: $json.remote.parentPath.Split('/').Split('', [System.StringSplitOptions]::RemoveEmptyEntries)
@@ -29,11 +34,6 @@ function new-dp
     # if param path matches the sams-me network share "sams-c2" string...
     if ($path -match ($a = $json.remote.parentPath.Split('/').Split('', [System.StringSplitOptions]::RemoveEmptyEntries)[4]))
     {
-        
-        
-        
-        
-        
         <#foreach ($name in $json.appsWithDependencies.name)
         {
             if ($path -match $name)
@@ -42,5 +42,10 @@ function new-dp
             }
         }
         #>
+    }
+
+    if ($build.Equals('locald'))
+    {
+        "building on $build."
     }
 }
